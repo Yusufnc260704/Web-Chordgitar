@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+}
+
+header img {
+  width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.music-player {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.music-player img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.music-player h2 {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.search-box {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.search-box input {
+  padding: 8px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-box button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background-color: #45a049;
+}
+
+nav {
+  background-color: #444;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.chord {
+  color: rgb(255, 251, 0);
+}
+
+#beranda-content p {
+  color: white;
+  margin: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#beranda-content h2 {
+  color: yellow;
+  margin-left: 20px;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chord Guit</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+      header img {
+        display: block;
+        margin: 20px auto;
+      }
+      .music-player,
+      .content {
+        text-align: center;
+        margin: 20px;
+      }
+      .content {
+        height: 70vh;
+        overflow-y: auto;
+        padding: 10px;
+      }
+      .content pre {
+        text-align: left;
+        white-space: pre-wrap;
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .controls {
+        text-align: center;
+        margin: 20px 0;
+      }
+      button {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="LOGOCHORD.png" alt="Logo Chord Guit" />
+    </header>
+
+    <div class="controls">
+      <button id="startScroll">Play</button>
+      <button id="stopScroll">Stop</button>
+    </div>
+
+    <div class="music-player">
+      <img src="Logomusic.jpg" alt="Logo Musik" />
+      <h5>The Jansen - Mereguk Anti Depresan Lagi</h5>
+      <audio controls>
+        <source src="TheJansen_DepresanLagi.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+
+    <div class="content">
+      <h2>The Jansen - Mereguk Anti Depresan Lagi</h2>
+      <pre>
+Intro: <span class="chord">D  G   D  G</span>
+       <span class="chord">D  G   D  G  D</span>
+
+Verse:
+<span class="chord">D           G           Em</span>
+April mohon datang kembali
+<span class="chord">A         D      G     Em  A</span>
+Tak lagi menjadi hal ku benci
+<span class="chord">D           G        Em</span>
+Hitam putih tersaturasi
+<span class="chord">A         D      G       Em  G</span>
+Mewarnai kanvas di senin pagi
+
+Pre-Chorus:
+<span class="chord">A               Em</span>
+Terisolasikan diri
+<span class="chord">A                 G</span>
+Tekanan semakin jadi
+<span class="chord">A               Em</span>
+Terisolasikan diri
+<span class="chord">A                     G</span>
+Ramai dan tak terkendali
+
+Chorus:
+<span class="chord">D            G          Em</span>
+Mereguk anti depresan lagi
+<span class="chord">A             D          G    Em  A</span>
+Seperti yang engkau bicarakan tempo hari
+<span class="chord">D              G           Em</span>
+Kau membuat ku selalu terkesan
+<span class="chord">A              D        G    Em  G</span>
+Seperti brownies yang kau kirimkan
+
+Outro:
+<span class="chord">D                G         Em</span>
+Oh April mohon datang kembali
+<span class="chord">A         D      G     Em A</span>
+Tak lagi menjadi hal ku benci
+<span class="chord">D              G     Em</span>
+Hitam putih tersaturasi
+<span class="chord">A         D        G     Em G</span>
+Mewarnai kanvas di senin pagi
+        </pre>
+    </div>
+
+    <footer>
+      <p>Hak Cipta &copy; 2024 Chord Guit</p>
+    </footer>
+
+    <script>
+      let scrollInterval;
+      let isScrolling = false;
+
+      document.getElementById("startScroll").addEventListener("click", startAutoScroll);
+      document.getElementById("stopScroll").addEventListener("click", stopAutoScroll);
+
+      function startAutoScroll() {
+        if (isScrolling) return;
+
+        isScrolling = true;
+        let scrollSpeed = 1;
+        scrollInterval = setInterval(() => {
+          document.querySelector(".content").scrollBy(0, scrollSpeed);
+        }, 1000);
+      }
+
+      function stopAutoScroll() {
+        clearInterval(scrollInterval);
+        isScrolling = false;
+      }
+    </script>
+  </body>
+</html>

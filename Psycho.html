@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chord Guit</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+      header img {
+        display: block;
+        margin: 20px auto;
+      }
+      .music-player,
+      .content {
+        text-align: center;
+        margin: 20px;
+      }
+      .content {
+        height: 70vh;
+        overflow-y: auto;
+        padding: 10px;
+      }
+      .content pre {
+        text-align: left;
+        white-space: pre-wrap;
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .controls {
+        text-align: center;
+        margin: 20px 0;
+      }
+      button {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="LOGOCHORD.png" alt="Logo Chord Guit" />
+    </header>
+
+    <div class="controls">
+      <button id="startScroll">Play</button>
+      <button id="stopScroll">Stop</button>
+    </div>
+
+    <div class="music-player">
+      <img src="Logomusic.jpg" alt="Logo Musik" />
+      <h5>Slipknot - Psychosocial</h5>
+      <audio controls>
+        <source src="Slipknot_Pyschosocial.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+
+    <div class="content">
+      <h2>Slipknot - Psychosocial</h2>
+      <pre>
+Intro: <span class="chord">Bm  G  A  Em</span>
+       <span class="chord">Bm  G  A  Em</span>
+
+Verse:
+<span class="chord">Bm         G            A      Em</span>
+ I did my time and I want out
+<span class="chord">Bm        G               A        Em</span>
+ So effusive fade, it doesn't cut
+<span class="chord">Bm               G                 A              Em</span>
+ The soul is not so vibrant
+<span class="chord">Bm             G                    A        Em</span>
+ The reckoning, the sickening
+<span class="chord">Bm             G                     A               Em</span>
+ Packaging subversion, pseudo sacrosanct perversion
+
+<span class="chord">Bm             G        A        Em</span>
+Go drill your deserts, go dig your graves
+<span class="chord">Bm             G          A         Em</span>
+ Then fill your mouth with all the money you will save
+<span class="chord">Bm                 G              A        Em</span>
+Sinking in, getting smaller again
+<span class="chord">Bm              G           A            Em</span>
+ Undone, it has begun, I'm not the only one
+
+Pre-Chorus:
+<span class="chord">Bm        G                 A            Em</span>
+ And the rain will kill us all
+<span class="chord">Bm      G                A            Em</span>
+ Throw ourselves against the wall
+<span class="chord">Bm          G                  A           Em</span>
+ But no one else can see
+<span class="chord">Bm         G                A           Em</span>
+ The preservation of the martyr in me
+
+Chorus:
+<span class="chord">Bm       G       A          Em</span>
+ Psychosocial, psychosocial, psychosocial
+<span class="chord">Bm       G       A          Em</span>
+ Psychosocial, psychosocial, psychosocial
+
+Bridge:
+<span class="chord">Bm              G                   A            Em</span>
+There are cracks in the road we lay
+<span class="chord">Bm         G                      A         Em</span>
+ But where the temple fell, the secrets have gone mad
+<span class="chord">Bm        G                A             Em</span>
+This is nothing new, but when we killed it all
+<span class="chord">Bm            G                  A             Em</span>
+ The hate was all we had
+<span class="chord">Bm              G                    A        Em</span>
+Who needs another mess, we could start over
+<span class="chord">Bm              G                 A            Em</span>
+ Just look me in the eyes and say I'm wrong
+<span class="chord">Bm                G              A       Em</span>
+ Now there's only emptiness, venomous, insipid
+<span class="chord">Bm            G                A            Em</span>
+ I think we're done, I'm not the only one
+
+Pre-Chorus:
+<span class="chord">Bm        G                 A            Em</span>
+ And the rain will kill us all
+<span class="chord">Bm      G                A            Em</span>
+ Throw ourselves against the wall
+<span class="chord">Bm          G                  A           Em</span>
+ But no one else can see
+<span class="chord">Bm         G                A           Em</span>
+ The preservation of the martyr in me
+
+Chorus:
+<span class="chord">Bm       G       A          Em</span>
+ Psychosocial, psychosocial, psychosocial
+<span class="chord">Bm       G       A          Em</span>
+ Psychosocial, psychosocial, psychosocial
+
+Outro:
+<span class="chord">Bm     G     A     Em</span>
+<span class="chord">Bm     G     A     Em</span>
+<br>
+<br>
+<br>
+
+        </pre>
+    </div>
+
+    <footer>
+      <p>Hak Cipta &copy; 2024 Chord Guit</p>
+    </footer>
+
+    <script>
+      let scrollInterval;
+      let isScrolling = false;
+
+      document.getElementById("startScroll").addEventListener("click", startAutoScroll);
+      document.getElementById("stopScroll").addEventListener("click", stopAutoScroll);
+
+      function startAutoScroll() {
+        if (isScrolling) return;
+
+        isScrolling = true;
+        let scrollSpeed = 1;
+        scrollInterval = setInterval(() => {
+          document.querySelector(".content").scrollBy(0, scrollSpeed);
+        }, 1000);
+      }
+
+      function stopAutoScroll() {
+        clearInterval(scrollInterval);
+        isScrolling = false;
+      }
+    </script>
+  </body>
+</html>

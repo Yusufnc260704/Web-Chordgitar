@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chord Guit</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body style="background-color: black">
+    <header>
+      <img src="LOGOCHORD.png" alt="Logo Chord Guit" />
+    </header>
+    <nav style="margin-bottom: -56px">
+      <a href="#" id="beranda-link">Beranda</a>
+      <a href="#" id="kategori-link">Chord</a>
+      <a href="#" id="tentang-link">Tentang</a>
+      <a href="#" id="kontak-link">Kontak</a>
+    </nav>
+
+    <div class="search-box" style="margin-right: 20px">
+      <input type="text" placeholder="Cari Chord..." />
+      <button type="submit">Cari</button>
+    </div>
+
+    <div class="content" style="background-color: black" id="content"></div>
+
+    <footer>
+      <p>Hak Cipta &copy; 2024 Chord Guit</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("beranda-link").addEventListener("click", function (event) {
+          event.preventDefault();
+          document.getElementById("content").innerHTML = `
+                  <h2 style="color: yellow; margin-left: 20px;">Hai Guiters!</h2>
+                  <p style="color: white; margin-left: 20px;">Selamat Datang di Chord Guit. Chord Guit adalah situs terbaik bagi para pecinta musik, khususnya bagi mereka yang ingin belajar dan memainkan gitar. Kami menyediakan koleksi lengkap chord gitar dari berbagai genre musik, mulai dari pop, rock, hingga jazz. Dengan tampilan yang user-friendly dan mudah dinavigasi, Anda dapat dengan mudah menemukan chord gitar dari lagu favorit Anda. Kami berkomitmen untuk membantu Anda meningkatkan keterampilan bermain gitar Anda dengan menyediakan chord yang akurat dan mudah diikuti. Di Chord Guit, kami selalu memperbarui koleksi chord kami dengan lagu-lagu terbaru dan populer. Anda dapat menemukan chord gitar dari lagu-lagu terbaru di bagian Kategori. Kami memahami betapa pentingnya bagi gitaris untuk selalu mengikuti tren musik terbaru, oleh karena itu, kami selalu berusaha untuk menambahkan chord dari lagu-lagu yang sedang hits. Dengan demikian, Anda tidak akan ketinggalan dalam memainkan lagu-lagu terbaru yang sedang digemari.
+
+      Kami sangat menghargai masukan dari pengguna kami. Banyak pengguna kami yang merasa sangat terbantu dengan adanya situs ini. Mereka mengatakan bahwa chord-chord yang kami sediakan sangat lengkap dan mudah diikuti, sehingga membantu mereka dalam belajar gitar. Kami selalu berusaha untuk meningkatkan kualitas layanan kami berdasarkan masukan dari pengguna. Dengan begitu, kami dapat terus menyediakan konten yang bermanfaat dan sesuai dengan kebutuhan para gitaris. Kami selalu siap mendengar dari Anda. Jika Anda memiliki pertanyaan, saran, atau membutuhkan bantuan, jangan ragu untuk menghubungi kami. Anda dapat menghubungi kami melalui email di info@chordguit.com. Kami akan dengan senang hati membantu Anda. Dukungan Anda sangat berarti bagi kami, dan kami berharap dapat terus menyediakan layanan yang terbaik bagi komunitas gitaris.
+      
+      <br>
+      <br>
+      <br>
+      Jika ingin memberikan komentar atau request music mengenai website ini silahkan ke bagian kontak kami untuk request music yang anda rekomendasikan dalam website ini dengan cara klik kontak yang berada di atas dan masukkan request music anda :).</p>
+                `;
+        });
+
+        document.getElementById("kategori-link").addEventListener("click", function (event) {
+          event.preventDefault();
+          document.getElementById("content").innerHTML = `
+                  <h1 style="color: blue; margin-left: 20px;">Chord Terbaru 2024</h1>
+                  <ul style="color: white; margin-left: 20px;">
+                    <img src="A7X.png" alt="A7X" margin-left: 200px;/>
+                    <h3 style="color: white; margin-left: 20px;">Avenged Sevenfold Life Is But A Dream Album </h3>
+                    <li><a href="Cosmic.html" style="color: yellow;">Avenged Sevenfold - Dear God</a></li>
+                    <li><a href="#" style="color: yellow;">Avenged Sevenfold - Game Over</a></li>
+                    <li><a href="#" style="color: yellow;">Avenged Sevenfold - Nobody</a></li>
+                    <li><a href="#" style="color: yellow;">Avenged Sevenfold - Mattel</a></li>
+                    <li><a href="#" style="color: yellow;">Avenged Sevenfold - We Love You</a></li>
+                    <li><a href="#" style="color: yellow;">Avenged Sevenfold - G</a></li>
+                    <li><a href="#" style="color: yellow;">Avenged Sevenfold - (O)rdinary</a></li>
+                    <li><a href="#" style="color: yellow;">Avenged Sevenfold - (D)eath</a></li>
+
+                  <h1 style="color: blue; margin-left: 20px;">Heavy Metal</h1>
+                  <img src="Slipknot.png" alt="Slipknot"/>
+                    <h3 style="color: white; margin-left: 20px;">Slipknot</h3>
+                    <li><a href="Psycho.html" style="color: yellow;">Slipknot - Psychosocial</a></li>
+                    <li><a href="#" style="color: yellow;">Slipknot - Duality</a></li>
+                    <li><a href="Snuff.html" style="color: yellow;">Slipknot - Snuff</a></li>
+                    <li><a href="#" style="color: yellow;">Slipknot - Unsainted</a></li>
+                    <li><a href="#" style="color: yellow;">Slipknot - Custer</a></li>
+                    <li><a href="#" style="color: yellow;">Slipknot - Vermilion</a></li>
+
+                  <h1 style="color: blue; margin-left: 20px;">Indie</h1>
+                  <img src="Jansen.png" alt="Jansen"/>
+                  <h3 style="color: white; margin-left: 20px;">The Jansen</h3>
+                    <li><a href="JansenDepresan.html" style="color: yellow;">The Jansen - Mereguk Anti Depresan Lagi</a></li>
+                    <li><a href="#" style="color: yellow;">The Jansen - Langit Tak Seharusnya Biru</a></li>
+                    <li><a href="#" style="color: yellow;">The Jansen - Kau Pemeran Utama Di Sebuah Opera</a></li>
+                    <li><a href="#" style="color: yellow;">The Jansen - Ku Bukan Mesin Lotremu</a></li>
+                    <li><a href="#" style="color: yellow;">The Jansen - Berkelana Dalam Ruang Dan Mimpi</a></li>
+                    <li><a href="#" style="color: yellow;">The Jansen - Tipu Daya Sejarah</a></li>
+
+                  <h1 style="color: blue; margin-left: 20px;">Pop Punk</h1>
+                  <img src="TS.png" alt="ThreeSixty"/>
+                  <h3 style="color: white; margin-left: 20px;">Threesixty Skatepunk</h3>
+                  <li><a href="ThreeDewi.html" style="color: yellow;">Threesixty Skatepunk - Dewi</a></li>
+                  <li><a href="#" style="color: yellow;">Threesixty Skatepunk - Sampai Nanti</a></li>
+                  <li><a href="#" style="color: yellow;">Threesixty Skatepunk - Takkan Bisa</a></li>
+                  <li><a href="#" style="color: yellow;">Threesixty Skatepunk - Menghilang Dan Berarti</a></li>
+                  <li><a href="#" style="color: yellow;">Threesixty Skatepunk - Berharap Mampu</a></li>
+                  <li><a href="#" style="color: yellow;">Threesixty Skatepunk - Hingga Semua Menghilang</a></li>
+                  <li><a href="#" style="color: yellow;">Threesixty Skatepunk - Nadaku Terhenti</a></li>
+                  <li><a href="#" style="color: yellow;">Threesixty Skatepunk - Sembunyi Bicara</a></li>
+                    <br>
+                     <br>
+                      <br>
+                       <br>
+                        <br>
+
+
+
+                `;
+        });
+
+        document.getElementById("tentang-link").addEventListener("click", function (event) {
+          event.preventDefault();
+          document.getElementById("content").innerHTML = `
+                  <h2 style="color: white; margin-left: 20px;">Tentang Kami</h2>
+                  <p style="color: white; margin-left: 20px;">Chord Guit didirikan pada tahun 2024 oleh sekelompok pecinta musik dengan tujuan menyediakan sumber belajar gitar yang lengkap dan terpercaya. Kami menyadari bahwa banyak gitaris yang kesulitan menemukan chord yang akurat dan mudah diikuti. Oleh karena itu, kami hadir untuk mengatasi masalah tersebut dengan menyediakan chord dari berbagai lagu dan genre. Tim kami terdiri dari musisi dan pengembang yang berpengalaman. Kami bekerja sama untuk memastikan bahwa setiap chord yang kami sediakan telah diperiksa dengan teliti agar sesuai dengan standar kualitas kami. Kami juga berusaha untuk menambahkan fitur-fitur baru yang dapat membantu pengguna dalam belajar dan memainkan gitar. Jika Anda memiliki pertanyaan atau saran, jangan ragu untuk menghubungi kami. Kami sangat menghargai masukan dari pengguna kami dan selalu berusaha untuk meningkatkan layanan kami berdasarkan feedback yang kami terima. Anda dapat menghubungi kami melalui email di info@chordguit.com. Terima kasih telah menggunakan Chord Guit!</p>
+                  <p style="color: white; margin-left: 20px;">- Team Chord Guit -</p>
+                `;
+        });
+
+        document.getElementById("kontak-link").addEventListener("click", function (event) {
+          event.preventDefault();
+          document.getElementById("content").innerHTML = `
+                  <h2 style="color: yellow; margin-left: 20px;">Kontak Kami</h2>
+                  <p style="color: white; margin-left: 20px;">Email: info@chordgitar.com</p>
+                  <p style="color: white; margin-left: 20px;">Instagram: @ncahjoy</p>
+                  <form action="request_song.php" method="post" style="margin-left: 20px;">
+                    <h3 style="color: white;">Request Lagu</h3>
+                    <label for="email" style="color: white;">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="song" style="color: white;">Nama Lagu:</label><br>
+                    <input type="text" id="song" name="song" required><br><br>
+                    <button type="submit">Kirim</button>
+                  </form>
+                `;
+        });
+      });
+    </script>
+  </body>
+</html>

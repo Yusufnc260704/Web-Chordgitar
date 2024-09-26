@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chord Guit</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+      header img {
+        display: block;
+        margin: 20px auto;
+      }
+      .music-player,
+      .content {
+        text-align: center;
+        margin: 20px;
+      }
+      .content {
+        height: 70vh;
+        overflow-y: auto;
+        padding: 10px;
+      }
+      .content pre {
+        text-align: left;
+        white-space: pre-wrap;
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .controls {
+        text-align: center;
+        margin: 20px 0;
+      }
+      button {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="LOGOCHORD.png" alt="Logo Chord Guit" />
+    </header>
+
+    <div class="controls">
+      <button id="startScroll">Play</button>
+      <button id="stopScroll">Stop</button>
+    </div>
+
+    <div class="music-player">
+      <img src="Logomusic.jpg" alt="Logo Musik" />
+      <h5 style="color: azure">Avenged Sevenfold - Dear God</h5>
+      <audio controls>
+        <source src="DearGodA7X.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+
+    <div class="content">
+      <h2 style="color: yellow; margin-left: 20px">Avenged Sevenfold - Dear God</h2>
+      <pre>
+Intro: <span class="chord">C G Am Em F C G
+       C G Am Em F C G</span>
+
+*)
+<span class="chord">C        G</span>
+a lonely road,
+         <span class="chord">Am                 Em</span>
+crossed another cold state line  
+<span class="chord">F               C</span>
+Miles away from those I love
+<span class="chord">G</span>
+purpose hard to find
+
+<span class="chord">C          G</span>
+while I recall
+        <span class="chord">Am                 Em</span>
+all the words you spoke to me  
+      <span class="chord">F                  C</span>
+can't help but wish that I was there  
+     <span class="chord">G</span>
+back where I'd love to be, oh yeah
+
+Reff:
+  <span class="chord">C    G</span>
+  dear God
+      <span class="chord">Am           G</span>
+  the only thing I ask of you is  
+     <span class="chord">F                     C</span>
+  to hold her when I'm not around,  
+           <span class="chord">G</span>
+  when I'm much too far away
+  <span class="chord">C    G</span>
+  We all need
+      <span class="chord">Am           G</span>
+  that person who can be true to you  
+     <span class="chord">F              C</span>
+  but I left her when I found her  
+    <span class="chord">G</span>
+  and now I wish I'd stayed  
+            <span class="chord">F            G</span>
+  cause I'm lonely and I'm tired  
+    <span class="chord">Em            Am  G  F</span>
+  I'm missing you again oh no  
+      <span class="chord">C</span>
+  once again
+
+<span class="chord">C                G</span>
+there's nothing here
+        <span class="chord">Am              Em</span>
+for me on this barren road  
+        <span class="chord">F                        C</span>
+there's no one here while the city sleeps  
+        <span class="chord">G</span>
+and all the shops are closed  
+<span class="chord">C               G</span>
+can't help but think
+         <span class="chord">Am                Em</span>
+of the times I've had with you  
+<span class="chord">F                  C</span>
+pictures and some memories
+       <span class="chord">G</span>
+will have to help me through, oh yeah
+
+==Back to : Reff
+
+<span class="chord">Am       E   F               C</span>
+some search, never finding a way  
+<span class="chord">Am      E    F            C</span>
+before long, they waste away  
+<span class="chord">Am       E   F                      C</span>
+I found you, something told me to stay  
+<span class="chord">Am     E   F             C</span>
+I gave in, to selfish ways  
+<span class="chord">Dm                         G</span>
+and how I miss someone to hold
+                        <span class="chord">C</span>
+when hope begins to fade...  
+
+==Back to : *), Reff
+
+Outro : <span class="chord">Am E F C (17x)</span>
+        </pre>
+    </div>
+
+    <footer>
+      <p>Hak Cipta &copy; 2024 Chord Guit</p>
+    </footer>
+
+    <script>
+      let scrollInterval;
+      let isScrolling = false;
+
+      document.getElementById("startScroll").addEventListener("click", startAutoScroll);
+      document.getElementById("stopScroll").addEventListener("click", stopAutoScroll);
+
+      function startAutoScroll() {
+        if (isScrolling) return;
+
+        isScrolling = true;
+        let scrollSpeed = 1;
+        scrollInterval = setInterval(() => {
+          document.querySelector(".content").scrollBy(0, scrollSpeed);
+        }, 200);
+      }
+
+      function stopAutoScroll() {
+        clearInterval(scrollInterval);
+        isScrolling = false;
+      }
+    </script>
+  </body>
+</html>

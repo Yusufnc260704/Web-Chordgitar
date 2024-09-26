@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chord Guit</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+      header img {
+        display: block;
+        margin: 20px auto;
+      }
+      .music-player,
+      .content {
+        text-align: center;
+        margin: 20px;
+      }
+      .content {
+        height: 70vh;
+        overflow-y: auto;
+        padding: 10px;
+      }
+      .content pre {
+        text-align: left;
+        white-space: pre-wrap;
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .controls {
+        text-align: center;
+        margin: 20px 0;
+      }
+      button {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="LOGOCHORD.png" alt="Logo Chord Guit" />
+    </header>
+
+    <div class="controls">
+      <button id="startScroll">Play</button>
+      <button id="stopScroll">Stop</button>
+    </div>
+
+    <div class="music-player">
+      <img src="Logomusic.jpg" alt="Logo Musik" />
+      <h5>Threesixty Skatepunk - Dewi</h5>
+      <audio controls>
+        <source src="ThreeSixty_Dewi.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+
+    <div class="content">
+      <h2>Threesixty Skatepunk - Dewi</h2>
+      <pre>
+Intro: <span class="chord">G C Am D Bm Em C D G</span>
+
+Verse:
+<span class="chord">G               C</span>
+dewi bintang kecilku yang pilu
+<span class="chord">Am            D</span>
+coba pahami arti hidupku
+<span class="chord">Bm</span>
+disetiap langkah
+<span class="chord">Em</span>
+dari arah yang kau pilih
+<span class="chord">C         D</span>
+tuk dapatkan yang kau cari
+
+<span class="chord">G            C</span>
+dewi berikanlah senyum itu
+<span class="chord">Am             D</span>
+buat dunia takluk kakimu
+<span class="chord">Bm</span>
+walau seribu tombak
+<span class="chord">Em</span>
+menghujung jantungmu
+<span class="chord">C          D</span>
+jangan pernah kau menangis
+
+Chorus:
+<span class="chord">G                 D</span>
+dewi rebahkan semua letihmu
+<span class="chord">Em         Bm</span>
+padamkan api kecilmu
+<span class="chord">C          G</span>
+sejenak lelap dalam mimpimu
+<span class="chord">Em         D</span>
+hingga pagi menjemputmu
+
+<span class="chord">G         D</span>
+dewi akan tiba esok hari
+<span class="chord">Em         Bm</span>
+hitam rambutmu memutih
+<span class="chord">C            G</span>
+biar perlahan waktu buktikan
+<span class="chord">Em        D            G</span>
+indah arti hidup ini
+
+Outro: <span class="chord">G C Am D Bm Em C D G</span>
+        </pre>
+    </div>
+
+    <footer>
+      <p>Hak Cipta &copy; 2024 Chord Guit</p>
+    </footer>
+
+    <script>
+      let scrollInterval;
+      let isScrolling = false;
+
+      document.getElementById("startScroll").addEventListener("click", startAutoScroll);
+      document.getElementById("stopScroll").addEventListener("click", stopAutoScroll);
+
+      function startAutoScroll() {
+        if (isScrolling) return;
+
+        isScrolling = true;
+        let scrollSpeed = 1;
+        scrollInterval = setInterval(() => {
+          document.querySelector(".content").scrollBy(0, scrollSpeed);
+        }, 1000);
+      }
+
+      function stopAutoScroll() {
+        clearInterval(scrollInterval);
+        isScrolling = false;
+      }
+    </script>
+  </body>
+</html>
